@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import data from "./data";
 function App() {
+  const [count, setCount] = useState(0);
+  const [text, setText] = useState([]);
+
+  const handleSubmit = (e) => {};
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Lorem ipsum Project</h2>
+      <form className="lorem-form" onSubmit={handleSubmit}></form>
     </div>
   );
 }
